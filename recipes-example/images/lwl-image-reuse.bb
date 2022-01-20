@@ -8,4 +8,6 @@ IMAGE_LINGUAS = "zh-cn"
 
 IMAGE_NAME = "myimage"
 
-IMAGE_INSTALL_append = " mygit"
+IMAGE_INSTALL_append = " myhello-dbg myhello-lwl"
+
+#IMAGE_INSTALL_append = " mygit"
