@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include "mylib.h"
 int main()
 {
 	printf("Hello World\n");
-	print("Hello LWL\n", 5);
+	system("lspci");
 	return 0;
 }

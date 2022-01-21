@@ -6,9 +6,9 @@ SRC_URI = "file://userprog.c \
 	   file://ReadMe.txt"
 
 S = "${WORKDIR}"
-DEPENDS = "mydynamiclib"
+RDEPENDS_${PN} = "pciutils"
 do_compile() {
-	${CC} -DUSE_SYSCALL userprog.c ${LDFLAGS} -o userprog -llwl
+	${CC} -DUSE_SYSCALL userprog.c ${LDFLAGS} -o userprog
 }
 
 do_install() {
