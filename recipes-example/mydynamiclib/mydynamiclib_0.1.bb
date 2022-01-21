@@ -11,16 +11,16 @@ S = "${WORKDIR}"
 do_compile() {
 	${CC} -c -fPIC print.c
 	${CC} -c -fPIC arith.c
-	${CC} ${LDFLAGS} -shared -o liblwl.so *.o
+	${CC} ${LDFLAGS} -shared -Wl,-soname,liblwl.so.1 -o liblwl.so.1.0 *.o
 }
 
 do_install() {
 	install -d ${D}${libdir}
-	install -m 0755 liblwl.so ${D}${libdir}
+	install -m 0755 liblwl.so.1.0 ${D}${libdir}
+	ln -s liblwl.so.1.0 ${D}${libdir}/liblwl.so.1
+	ln -s liblwl.so.1 ${D}${libdir}/liblwl.so
 	install -d ${D}${includedir}
 	install -m 0644 mylib.h ${D}${includedir}
 }
 
-SOLIBS = ".so"
-FILES_SOLIBSDEV = ""
 #ALLOW_EMPTY_${PN} = "1"

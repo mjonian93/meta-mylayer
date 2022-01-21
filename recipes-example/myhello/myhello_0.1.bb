@@ -6,7 +6,7 @@ SRC_URI = "file://userprog.c \
 	   file://ReadMe.txt"
 
 S = "${WORKDIR}"
-DEPENDS = "mystaticlib"
+DEPENDS = "mydynamiclib"
 do_compile() {
 	${CC} -DUSE_SYSCALL userprog.c ${LDFLAGS} -o userprog -llwl
 }
