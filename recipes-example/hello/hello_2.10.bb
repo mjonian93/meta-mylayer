@@ -8,3 +8,4 @@ SRC_URI[md5sum] = "6cd0ffea3884a4e79330338dcc2987d6"
 SRC_URI[sha256sum] = "31e066137a962676e89f69d1b65382de95a7ef7d914b8cb956f41ea72e0f516b"
 
 inherit autotools-brokensep gettext
+EXTRA_OECONF += "--disable-nls"
