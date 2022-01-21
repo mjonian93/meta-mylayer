@@ -6,9 +6,9 @@ SRC_URI = "file://userprog.c \
 	   file://ReadMe.txt"
 
 S = "${WORKDIR}"
-
+DEPENDS = "mystaticlib"
 do_compile() {
-	${CC} -DUSE_SYSCALL userprog.c ${LDFLAGS} -o userprog
+	${CC} -DUSE_SYSCALL userprog.c ${LDFLAGS} -o userprog -llwl
 }
 
 do_install() {
@@ -17,9 +17,3 @@ do_install() {
 	install -d ${D}${includedir}
 	install -m 0644 ReadMe.txt ${D}${includedir}
 }
-
-FILES_${PN} += "${bindir}/userprog"
-FILES_${PN}-dbg += "${bindir}/userprog"
-FILES_${PN}-lwl = "${includedir}/ReadMe.txt"
-
-PACKAGES = "${PN}-dbg ${PN} ${PN}-lwl"

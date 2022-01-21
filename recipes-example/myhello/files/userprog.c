@@ -1,11 +1,8 @@
 #include <stdio.h>
-
+#include "mylib.h"
 int main()
 {
-	#ifdef USE_SYSCALL
-		write(1, "Hello System Call", 17);
-	#else
-		printf("Hello World");
-	#endif
+	printf("Hello World\n");
+	print("Hello LWL\n", 5);
 	return 0;
 }
