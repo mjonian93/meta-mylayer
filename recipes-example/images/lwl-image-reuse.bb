@@ -12,4 +12,4 @@ IMAGE_NAME = "myimage"
 
 #IMAGE_INSTALL_append = " mygit"
 
-IMAGE_INSTALL = " mystaticlib-staticdev"
+IMAGE_INSTALL = " mydynamiclib"
