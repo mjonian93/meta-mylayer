@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 SRC_URI = "git://github.com/linuxtrainer-lwl/git_recipe.git;protocol=https;branch=lwl"
 
 S = "${WORKDIR}/git"
-
+PROVIDES += "mylwl"
 #SRCREV = "${AUTOREV} #The latest revision
 SRCREV = "1365da80f841f14f934ee6baa826399aae0a0346"
 
