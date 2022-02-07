@@ -1,5 +1,5 @@
 require recipes-core/images/core-image-minimal.bb
-IMAGE_INSTALL_append = " usbutils"
+#IMAGE_INSTALL_append = " usbutils"
 
 #dropbear ssh server
 IMAGE_FEATURES = "ssh-server-dropbear debug-tweaks read-only-rootfs splash tools-debug tools-sdk"
@@ -13,3 +13,5 @@ IMAGE_NAME = "myimage"
 #IMAGE_INSTALL_append = " mygit"
 
 IMAGE_INSTALL = " mycmake"
+
+IMAGE_INSTALL_append = " packagroup-lwl"
