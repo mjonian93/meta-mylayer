@@ -5,7 +5,8 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 inherit kernel
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git;protocol=git; \
-	   file://defconfig "
+	   file://defconfig \
+	   file://0001-my-first-msg.patch "
 
 SRCREV = "${AUTOREV}"
 
