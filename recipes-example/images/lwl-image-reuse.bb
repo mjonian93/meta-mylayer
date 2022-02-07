@@ -14,4 +14,4 @@ IMAGE_NAME = "myimage"
 
 IMAGE_INSTALL = " mycmake"
 
-IMAGE_INSTALL_append = " packagroup-lwl"
+IMAGE_INSTALL_append = " packagegroup-lwl"
